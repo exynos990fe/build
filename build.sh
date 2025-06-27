@@ -41,9 +41,6 @@ echo "==================================="
 echo "Navigating to Croot and Starting Build"
 echo "==================================="
 
-# Navigate to the croot directory (root of the source tree)
-croot
-
 # Start the build process for r8s
 m bacon
 
