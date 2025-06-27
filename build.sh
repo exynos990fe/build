@@ -1,6 +1,8 @@
 echo "==================================="
 echo "Initializing Repo and Cloning Manifests"
 echo "==================================="
+# Removing old manifests
+rm -rf .repo/local_manifests
 
 # Initialize the LineageOS repository
 repo init -u https://github.com/LineageOS/android.git -b lineage-22.2 --git-lfs
