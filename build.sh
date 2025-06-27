@@ -1,0 +1,52 @@
+echo "==================================="
+echo "Initializing Repo and Cloning Manifests"
+echo "==================================="
+
+# Initialize the LineageOS repository
+repo init -u https://github.com/LineageOS/android.git -b lineage-22.2 --git-lfs
+
+# Clone local manifests for r8s
+git clone https://github.com/exynos990fe/manifest_r8s.git .repo/local_manifests
+
+echo "==================================="
+echo "Running Resync Script"
+echo "==================================="
+
+# Run the crave resync script
+/opt/crave/resync.sh
+
+echo "==================================="
+echo "Setting up Build Environment"
+echo "==================================="
+
+# Source the build environment setup script
+source build/envsetup.sh
+
+echo "==================================="
+echo "Applying Repopicks"
+echo "==================================="
+
+# Apply specific changes using repopick
+repopick 419347
+repopick 435574
+
+echo "==================================="
+echo "Configuring Lunch Target"
+echo "==================================="
+
+# Choose the lunch target for r8s
+lunch lineage_r8s-bp1a-eng
+
+echo "==================================="
+echo "Navigating to Croot and Starting Build"
+echo "==================================="
+
+# Navigate to the croot directory (root of the source tree)
+croot
+
+# Start the build process for r8s
+m bacon
+
+echo "==================================="
+echo "Build process completed!"
+echo "==================================="
