@@ -11,11 +11,11 @@ repo init -u https://github.com/LineageOS/android.git -b lineage-22.2 --git-lfs
 git clone https://github.com/exynos990fe/manifest_r8s.git .repo/local_manifests
 
 echo "==================================="
-echo "Running Resync Script"
+echo "Running repo sync Script"
 echo "==================================="
 
-# Run the crave resync script
-/opt/crave/resync.sh
+# Run repo sync
+repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j$(nproc --all)
 
 echo "==================================="
 echo "Setting up Build Environment"
