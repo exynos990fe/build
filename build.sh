@@ -37,7 +37,7 @@ echo "Configuring Lunch Target"
 echo "==================================="
 
 # Choose the lunch target for r8s
-lunch lineage_r8s-bp1a-eng
+lunch lineage_r8s-bp1a-userdebug
 
 echo "==================================="
 echo "Navigating to Croot and Starting Build"
