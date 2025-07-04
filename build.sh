@@ -44,7 +44,7 @@ echo "Navigating to Croot and Starting Build"
 echo "==================================="
 
 # Start the build process for r8s
-m bacon
+m evolution
 
 echo "==================================="
 echo "Build process completed!"
