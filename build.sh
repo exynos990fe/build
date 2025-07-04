@@ -5,7 +5,7 @@ echo "==================================="
 rm -rf .repo/local_manifests
 
 # Initialize the LineageOS repository
-repo init -u https://github.com/LineageOS/android.git -b lineage-22.2 --git-lfs  --depth=1
+repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs --depth=1
 
 # Clone local manifests for r8s
 git clone https://github.com/exynos990fe/manifest_r8s.git .repo/local_manifests
