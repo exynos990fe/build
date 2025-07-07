@@ -8,7 +8,7 @@ rm -rf .repo/local_manifests
 repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs --depth=1
 
 # Clone local manifests for r8s
-git clone https://github.com/exynos990fe/manifest_r8s.git .repo/local_manifests
+git clone https://github.com/exynos990fe/manifest_r8s.git -b Test .repo/local_manifests
 
 echo "==================================="
 echo "Running repo sync Script"
